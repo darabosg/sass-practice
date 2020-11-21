@@ -1,0 +1,77 @@
+@use 'element-list' as li;
+
+
+// first animation
+%anim-one {
+    #one-1 {
+        transform: translate(4rem, 2rem);
+    }   
+    #one-2 {
+        transform: translate(0rem, 2rem);
+    }
+    #one-3 {
+        transform: translate(-4rem, 2rem);
+    }
+    #one-4 {
+        transform: translate(4rem, -2rem);
+    }
+    #one-5 {
+        transform: translate(0rem, -2rem);
+    }
+    #one-6 {
+        transform: translate(-4rem, -2rem);
+    }
+}
+%anim-one-toggle {
+    div {
+        margin: 2rem 4rem;
+    }
+}
+
+// second animation
+%anim-two-toggle {
+    #two-1 {
+        top: 0;
+        right: 0;
+    }
+    #two-2 {
+        top: 0;
+    }
+    #two-3 {
+        top: 0;
+        right: 0;
+    }
+    #two-4 {        
+        right: 0;
+        top: 0;
+    }
+    #two-5 {
+        top:  0;
+    }
+    #two-6 {
+        top:  0;
+        right: 0;
+    }
+}
+
+// third animation
+%anim-three-toggle {
+    #three-1 {
+        top: 0;
+    }
+    #three-2 {
+        top: 0;
+    }
+    #three-3 {
+        top: 0;
+    }
+    #three-4 {        
+        top: 0;
+    }
+    #three-5 {
+        top: 0;
+    }
+    #three-6 {
+        top: 0;
+    }
+}

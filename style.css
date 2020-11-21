@@ -1,0 +1,440 @@
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-1 {
+  transform: translate(4rem, 2rem);
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-2 {
+  transform: translate(0rem, 2rem);
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-3 {
+  transform: translate(-4rem, 2rem);
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-4 {
+  transform: translate(4rem, -2rem);
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-5 {
+  transform: translate(0rem, -2rem);
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one #one-6 {
+  transform: translate(-4rem, -2rem);
+}
+
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one-toggle div {
+  margin: 2rem 4rem;
+}
+
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-1 {
+  top: 0;
+  right: 0;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-2 {
+  top: 0;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-3 {
+  top: 0;
+  right: 0;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-4 {
+  right: 0;
+  top: 0;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-5 {
+  top: 0;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle #two-6 {
+  top: 0;
+  right: 0;
+}
+
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-1 {
+  top: 0;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-2 {
+  top: 0;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-3 {
+  top: 0;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-4 {
+  top: 0;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-5 {
+  top: 0;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle #three-6 {
+  top: 0;
+}
+
+label, .content > div {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: #aaa;
+  border-radius: 2px;
+}
+
+input[type=radio]:checked + label, label:hover, .content > div:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: box shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #bbb;
+}
+
+input[value=one]:checked ~ .staff-one div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=one]:checked ~ .staff-one-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=two]:checked ~ .staff-two div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=two]:checked ~ .staff-two-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=three]:checked ~ .staff-three div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=three]:checked ~ .staff-three-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=four]:checked ~ .staff-four div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=four]:checked ~ .staff-four-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=five]:checked ~ .staff-five div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=five]:checked ~ .staff-five-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=six]:checked ~ .staff-six div {
+  opacity: 1;
+  z-index: 2;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+input[value=six]:checked ~ .staff-six-toggle div {
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=one]:checked ~ input[value=one-toggle]:checked ~ .staff-one-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=two]:checked ~ input[value=two-toggle]:checked ~ .staff-two-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=three]:checked ~ input[value=three-toggle]:checked ~ .staff-three-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+input[value=four]:checked ~ input[value=four-toggle]:checked ~ .staff-four div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=four]:checked ~ input[value=four-toggle]:checked ~ .staff-four-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+input[value=five]:checked ~ input[value=five-toggle]:checked ~ .staff-five div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=five]:checked ~ input[value=five-toggle]:checked ~ .staff-five-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+input[value=six]:checked ~ input[value=six-toggle]:checked ~ .staff-six div {
+  opacity: 0;
+  z-index: 1;
+}
+input[value=six]:checked ~ input[value=six-toggle]:checked ~ .staff-six-toggle div {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Disables all checkbox labels */
+label[for=one-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+label[for=two-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+label[for=three-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+label[for=four-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+label[for=five-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+label[for=six-toggle] {
+  pointer-events: none;
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  margin: 0;
+}
+
+/* Enables the one checkbox */
+input[id=one]:checked ~ label[for=one-toggle] {
+  pointer-events: initial;
+}
+
+input[id=two]:checked ~ label[for=two-toggle] {
+  pointer-events: initial;
+}
+
+input[id=three]:checked ~ label[for=three-toggle] {
+  pointer-events: initial;
+}
+
+input[id=four]:checked ~ label[for=four-toggle] {
+  pointer-events: initial;
+}
+
+input[id=five]:checked ~ label[for=five-toggle] {
+  pointer-events: initial;
+}
+
+input[id=six]:checked ~ label[for=six-toggle] {
+  pointer-events: initial;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  margin: 0;
+  background-color: #888;
+  overflow: hidden;
+}
+
+.container {
+  display: grid;
+  place-self: center;
+  width: 90%;
+  height: 80%;
+  grid-template: "one one-toggle content content content content content" "two two-toggle content content content content content" "three three-toggle content content content content content" "four four-toggle content content content content content" "five five-toggle content content content content content" "six six-toggle content content content content content";
+  grid-template-columns: 1fr 5rem 1fr 1fr 1fr 1fr 1fr;
+}
+
+label[for=one] {
+  grid-area: one;
+}
+
+label[for=two] {
+  grid-area: two;
+}
+
+label[for=three] {
+  grid-area: three;
+}
+
+label[for=four] {
+  grid-area: four;
+}
+
+label[for=five] {
+  grid-area: five;
+}
+
+label[for=six] {
+  grid-area: six;
+}
+
+label[for=one-toggle] {
+  grid-area: one-toggle;
+}
+
+label[for=two-toggle] {
+  grid-area: two-toggle;
+}
+
+label[for=three-toggle] {
+  grid-area: three-toggle;
+}
+
+label[for=four-toggle] {
+  grid-area: four-toggle;
+}
+
+label[for=five-toggle] {
+  grid-area: five-toggle;
+}
+
+label[for=six-toggle] {
+  grid-area: six-toggle;
+}
+
+.content {
+  box-sizing: border-box;
+  grid-area: content;
+  margin: 1rem;
+}
+.content > div {
+  opacity: 0;
+  z-index: 1;
+}
+input {
+  display: none;
+}
+
+label {
+  margin: 1rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type=radio]:checked + label {
+  color: black;
+}
+
+.staff-one {
+  display: grid;
+  grid-template: auto auto/auto auto auto;
+  grid-gap: 2rem;
+}
+
+.staff-one-toggle {
+  display: grid;
+}
+.staff-one-toggle > div {
+  justify-self: stretch;
+  margin: 0;
+}
+
+.staff-two-toggle {
+  display: grid;
+  grid-template: auto auto/auto auto auto;
+  grid-gap: 2rem;
+}
+.staff-two-toggle div {
+  position: relative;
+}
+.staff-two-toggle #two-1 {
+  top: -100vh;
+  right: 100vw;
+}
+.staff-two-toggle #two-2 {
+  top: -100vw;
+}
+.staff-two-toggle #two-3 {
+  top: -100vh;
+  right: -100vw;
+}
+.staff-two-toggle #two-4 {
+  right: 100vw;
+  top: 100vw;
+}
+.staff-two-toggle #two-5 {
+  top: 100vh;
+}
+.staff-two-toggle #two-6 {
+  top: 100vh;
+  right: -100vw;
+}
+
+.staff-three-toggle {
+  display: grid;
+  grid-template: auto auto/auto auto auto;
+  grid-gap: 2rem;
+}
+.staff-three-toggle div {
+  position: relative;
+}
+.staff-three-toggle #three-1 {
+  top: 100vh;
+  transition-delay: 0.05s;
+}
+.staff-three-toggle #three-2 {
+  top: 100vh;
+  transition-delay: 0.1s;
+}
+.staff-three-toggle #three-3 {
+  top: 100vh;
+  transition-delay: 0.15s;
+}
+.staff-three-toggle #three-4 {
+  top: 100vh;
+  transition-delay: 0.2s;
+}
+.staff-three-toggle #three-5 {
+  top: 100vh;
+  transition-delay: 0.25s;
+}
+.staff-three-toggle #three-6 {
+  top: 100vh;
+  transition-delay: 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */

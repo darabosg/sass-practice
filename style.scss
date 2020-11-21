@@ -1,0 +1,229 @@
+@use 'element-list' as el;
+@use 'animations';
+
+%box {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #aaa;
+    border-radius: 2px;
+}
+%box-hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: box shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background-color: #bbb;
+}
+
+// Getting the right content depending on inputs
+@each $element, $number in el.$element-list {
+    input[value="#{$element}"]:checked ~ {
+        .staff-#{$element} div {
+            opacity: 1;
+            z-index: 2;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .staff-#{$element}-toggle div {
+            opacity: 0;
+            z-index: 1;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
+
+@each $element, $number in el.$element-list {
+    input[value="#{$element}"]:checked
+        ~ input[value="#{$element}-toggle"]:checked
+        ~ {
+        .staff-#{$element} {
+            div {
+                opacity: 0;
+                z-index: 1;
+            }
+            @extend %anim-#{$element} !optional;
+        }
+        .staff-#{$element}-toggle {
+            div {
+                opacity: 1;
+                z-index: 2;
+            }
+            @extend %anim-#{$element}-toggle !optional;
+        }
+    }
+}
+
+/* Disables all checkbox labels */
+@each $element, $number in el.$element-list {
+    label[for="#{$element}-toggle"] {
+        pointer-events: none;
+        width: 3rem;
+        height: 3rem;
+        place-self: center;
+        margin: 0;
+    }
+}
+/* Enables the one checkbox */
+@each $element, $number in el.$element-list {
+    input[id="#{$element}"]:checked ~ label[for="#{$element}-toggle"] {
+        pointer-events: initial;
+    }
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    margin: 0;
+    background-color: #888;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    place-self: center;
+    width: 90%;
+    height: 80%;
+    grid-template:
+        "one one-toggle content content content content content"
+        "two two-toggle content content content content content"
+        "three three-toggle content content content content content"
+        "four four-toggle content content content content content"
+        "five five-toggle content content content content content"
+        "six six-toggle content content content content content";
+    grid-template-columns: 1fr 5rem 1fr 1fr 1fr 1fr 1fr;
+}
+
+@each $element, $number in el.$element-list {
+    label[for="#{$element}"] {
+        grid-area: $element;
+    }
+}
+@each $element, $number in el.$element-list {
+    label[for="#{$element}-toggle"] {
+        grid-area: #{$element}-toggle;
+    }
+}
+
+.content {
+    box-sizing: border-box;
+    grid-area: content;
+    margin: 1rem;
+    
+
+    & > div {
+        opacity: 0;
+        z-index: 1;
+        @extend %box;
+        
+
+        &:hover {
+            @extend %box-hover;
+        }
+    }
+}
+input {
+    display: none;
+}
+
+label {
+    margin: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %box;
+
+    &:hover {
+        @extend %box-hover;
+    }
+}
+
+input[type="radio"]:checked + label {
+    color: black;
+    @extend %box-hover;
+}
+
+// First page
+.staff-one {
+    display: grid;
+    grid-template: auto auto / auto auto auto;
+    grid-gap: 2rem;
+}
+
+.staff-one-toggle {
+    display: grid;
+
+    & > div {
+        justify-self: stretch;
+        margin: 0;
+    }
+}
+
+// second page
+
+.staff-two-toggle {
+    display: grid;
+    grid-template: auto auto / auto auto auto;
+    grid-gap: 2rem;
+    
+
+    & div {
+        position: relative;
+        
+    }
+
+    #two-1 {
+        top: -100vh;
+        right: 100vw;
+    }
+    #two-2 {
+        top: -100vw;
+    }
+    #two-3 {
+        top: -100vh;
+        right: -100vw;
+    }
+    #two-4 {        
+        right: 100vw;
+        top: 100vw;
+    }
+    #two-5 {
+        top: 100vh;
+    }
+    #two-6 {
+        top: 100vh;
+        right: -100vw;
+    }
+}
+
+// third page
+.staff-three-toggle {
+    display: grid;
+    grid-template: auto auto / auto auto auto;
+    grid-gap: 2rem;
+    
+
+    & div {
+        position: relative;
+    }
+
+    @each $element, $number in el.$element-list{
+        & #three-#{$number} {
+            top: 100vh;
+            transition-delay: $number * 0.05s;
+        }
+    }
+
+}
+
+
+// fourth page
+.staff-four {
+    // background-color: rgb(214, 211, 22);
+}
+
+.staff-five {
+    // background-color: rgb(1, 225, 255);
+}
+
+.staff-six {
+    // background-color: rgb(255, 0, 212);
+}
